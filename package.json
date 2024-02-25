@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "bot": "nodemon main.js",
-    "install": "npm run install",
+    "install": "npm install --force",
     "start": "node main.js"
   },
   "keywords": [],
