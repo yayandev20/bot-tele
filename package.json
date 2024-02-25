@@ -1,0 +1,18 @@
+{
+  "name": "yayandev_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bot": "nodemon main.js",
+    "install": "npm install",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cypress/request": "^3.0.1",
+    "node-telegram-bot-api": "^0.64.0"
+  }
+}
