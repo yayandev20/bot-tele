@@ -2,16 +2,7 @@ const token = "7129500871:AAE55tzqOH-h60FcnU9EfPdRJg93W2J-WU4";
 const TelegramBot = require("node-telegram-bot-api");
 const request = require("@cypress/request");
 const bot = new TelegramBot(token, { polling: true });
-const express = require("express");
-const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Yayandev Bot Running");
-});
-
-app.listen(3000, () => {
-  console.log("Running on port 3000");
-});
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
   bot.sendMessage(
