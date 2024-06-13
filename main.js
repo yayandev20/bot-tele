@@ -131,7 +131,7 @@ bot.on("message", async (msg) => {
             formData.append("ktp", ktpBlob, "ktp.jpg");
             formData.append("photo", photoBlob, "photo.jpg");
             formData.append("nama", name);
-            formData.append("wilayah", region);
+            formData.append("wilayah", 11);
             formData.append("jabatan", jabatan);
 
             const apiUrl = "https://pjbn.upg.ac.id/api/arsipkta/simpan";
@@ -147,7 +147,7 @@ bot.on("message", async (msg) => {
             }
 
             const data = await response.json();
-            bot.sendMessage(chatId, `Data submitted: ${JSON.stringify(data)}`);
+            bot.sendMessage(chatId, "Data berhasil disimpan. /input");
           } catch (error) {
             bot.sendMessage(chatId, "Failed to download photos.");
             console.error("Error downloading or submitting photos:", error);
